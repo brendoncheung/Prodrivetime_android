@@ -1,0 +1,183 @@
+{
+  "project_info": {
+    "project_number": "852464021373",
+    "firebase_url": "https://drive-time-b3106.firebaseio.com",
+    "project_id": "drive-time-b3106",
+    "storage_bucket": "drive-time-b3106.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:852464021373:android:8094494b5fd56d61",
+        "android_client_info": {
+          "package_name": "com.alephreach.prodrivetime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "852464021373-5r85v4i6hl9crrcki52jafqnfjtk5io5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_gnMWG4CLZz0GoG2d2XtaP1mR-vDIAzI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "852464021373-5r85v4i6hl9crrcki52jafqnfjtk5io5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "852464021373-ovlg07495msicqnfqkddguk8mbvmvfei.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "alephreach.Prodrivetime-ios",
+                "app_store_id": "1233456"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:852464021373:android:b2ee9d7087ef33838c6614",
+        "android_client_info": {
+          "package_name": "com.alephreach.prodrivetime_android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "852464021373-0et2f5oeo7jci710esi1pnmkp7f0epem.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.alephreach.prodrivetime_android",
+            "certificate_hash": "f5db9d312d14b554a3f2a84fd9d41ac8615ff189"
+          }
+        },
+        {
+          "client_id": "852464021373-5r85v4i6hl9crrcki52jafqnfjtk5io5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_gnMWG4CLZz0GoG2d2XtaP1mR-vDIAzI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "852464021373-5r85v4i6hl9crrcki52jafqnfjtk5io5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "852464021373-ovlg07495msicqnfqkddguk8mbvmvfei.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "alephreach.Prodrivetime-ios",
+                "app_store_id": "1233456"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:852464021373:android:3786fc3f9f4f796a",
+        "android_client_info": {
+          "package_name": "com.example.localadmin.mvc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "852464021373-9l2qsvkc5qbtmufk0fsihu9ol9rb4mqi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.localadmin.mvc",
+            "certificate_hash": "f5db9d312d14b554a3f2a84fd9d41ac8615ff189"
+          }
+        },
+        {
+          "client_id": "852464021373-5r85v4i6hl9crrcki52jafqnfjtk5io5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_gnMWG4CLZz0GoG2d2XtaP1mR-vDIAzI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "852464021373-5r85v4i6hl9crrcki52jafqnfjtk5io5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "852464021373-ovlg07495msicqnfqkddguk8mbvmvfei.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "alephreach.Prodrivetime-ios",
+                "app_store_id": "1233456"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:852464021373:android:0c337f7bcbf092ae",
+        "android_client_info": {
+          "package_name": "solutions.a611.prodrivetime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "852464021373-ho5uc7hm1g0t78ir00e79vs4m5528cjk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "solutions.a611.prodrivetime",
+            "certificate_hash": "c0552493cd5869c98686631f4eb9041d9f82a5d7"
+          }
+        },
+        {
+          "client_id": "852464021373-5r85v4i6hl9crrcki52jafqnfjtk5io5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_gnMWG4CLZz0GoG2d2XtaP1mR-vDIAzI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "852464021373-5r85v4i6hl9crrcki52jafqnfjtk5io5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "852464021373-ovlg07495msicqnfqkddguk8mbvmvfei.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "alephreach.Prodrivetime-ios",
+                "app_store_id": "1233456"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,25 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="OutlinedBoxRoundedCorner" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusBottomEnd">8dp</item>
+        <item name="boxCornerRadiusBottomStart">8dp</item>
+        <item name="boxCornerRadiusTopEnd">8dp</item>
+        <item name="boxCornerRadiusTopStart">8dp</item>
+    </style>
+
+    <style name="H1">
+        <item name="android:textSize">@dimen/H1</item>
+        <item name="android:paddingTop">@dimen/topPaddingSmall</item>
+        <item name="android:paddingLeft">@dimen/leftPaddingSmall</item>
+        <item name="android:paddingBottom">@dimen/bottomPaddingSmall</item>
+    </style>
+
+</resources>

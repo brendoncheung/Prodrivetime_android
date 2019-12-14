@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="leftPaddingSmall">16dp</dimen>
+    <dimen name="leftPaddingBig">32dp</dimen>
+
+    <dimen name="rightPaddingSmall">16dp</dimen>
+    <dimen name="rightPaddingBig">32dp</dimen>
+
+    <dimen name="topPaddingSmall">16dp</dimen>
+    <dimen name="topPaddingBig">32dp</dimen>
+
+    <dimen name="bottomPaddingSmall">16dp</dimen>
+    <dimen name="bottomPaddingBig">32dp</dimen>
+
+    <dimen name="H1">24sp</dimen>
+    <dimen name="H2">18sp</dimen>
+    <dimen name="H3">14sp</dimen>
+
+</resources>
