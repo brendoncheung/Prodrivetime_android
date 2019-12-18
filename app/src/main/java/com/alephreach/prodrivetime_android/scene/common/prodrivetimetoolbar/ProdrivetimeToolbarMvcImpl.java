@@ -1,8 +1,5 @@
-package com.alephreach.prodrivetime_android.scene.common.ProdrivetimeToolbar;
+package com.alephreach.prodrivetime_android.scene.common.prodrivetimetoolbar;
 
-import androidx.appcompat.widget.Toolbar;
-
-import com.alephreach.prodrivetime_android.R;
 import com.alephreach.prodrivetime_android.application.common.BaseObservableViewMvc;
 
 public class ProdrivetimeToolbarMvcImpl extends BaseObservableViewMvc<ProdrivetimeToolbarMvc.Listener> implements ProdrivetimeToolbarMvc {

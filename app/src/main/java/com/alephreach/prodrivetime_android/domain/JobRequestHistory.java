@@ -1,4 +1,4 @@
-package com.alephreach.prodrivetime_android.domain.data;
+package com.alephreach.prodrivetime_android.domain;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

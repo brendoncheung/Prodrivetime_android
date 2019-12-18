@@ -7,7 +7,7 @@ import com.alephreach.prodrivetime_android.application.di.components.Application
 import com.alephreach.prodrivetime_android.application.di.components.DaggerPresentationComponent;
 import com.alephreach.prodrivetime_android.application.di.components.PresentationComponent;
 import com.alephreach.prodrivetime_android.application.di.modules.PresentationModule;
-import com.alephreach.prodrivetime_android.scene.common.FragmentFrameWrapper;
+import com.alephreach.prodrivetime_android.scene.common.wrapper.FragmentFrameWrapper;
 
 public class BaseActivity extends AppCompatActivity {
 
@@ -22,7 +22,7 @@ public class BaseActivity extends AppCompatActivity {
         if(mPresentationComponent == null) {
             mPresentationComponent = DaggerPresentationComponent.builder()
                     .presentationModule(new PresentationModule(getApplicationComponent(),
-                            this, (FragmentFrameWrapper) this))
+                            this))
                     .build();
         }
         return mPresentationComponent;

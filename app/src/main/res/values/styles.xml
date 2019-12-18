@@ -15,11 +15,20 @@
         <item name="boxCornerRadiusTopStart">8dp</item>
     </style>
 
-    <style name="H1">
+    <style name="baseStyle">
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="H1" parent="baseStyle">
         <item name="android:textSize">@dimen/H1</item>
-        <item name="android:paddingTop">@dimen/topPaddingSmall</item>
-        <item name="android:paddingLeft">@dimen/leftPaddingSmall</item>
-        <item name="android:paddingBottom">@dimen/bottomPaddingSmall</item>
+    </style>
+
+    <style name="H2" parent="baseStyle">
+        <item name="android:textSize">@dimen/H2</item>
+    </style>
+
+    <style name="H3" parent="baseStyle">
+        <item name="android:textSize">@dimen/H3</item>
     </style>
 
 </resources>

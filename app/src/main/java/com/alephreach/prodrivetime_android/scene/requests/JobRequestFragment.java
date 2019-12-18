@@ -1,4 +1,4 @@
-package com.alephreach.prodrivetime_android.scene.userprofile;
+package com.alephreach.prodrivetime_android.scene.requests;
 
 import android.os.Bundle;
 import android.os.Parcelable;
@@ -10,53 +10,76 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.alephreach.prodrivetime_android.application.di.factory.ViewMvcFactory;
+import com.alephreach.prodrivetime_android.domain.JobRequest;
 import com.alephreach.prodrivetime_android.domain.User;
 import com.alephreach.prodrivetime_android.scene.common.baseclass.BaseFragment;
 
 import org.parceler.Parcels;
 
+import java.util.List;
+
 import javax.inject.Inject;
 
-public class UserProfileFragment extends BaseFragment {
+public class JobRequestFragment extends BaseFragment {
 
     public static final String USER_KEY = "USER_KEY";
 
     private User mUser;
 
-    @Inject UserProfileController mUserProfileController;
-    @Inject ViewMvcFactory mViewMvcFactory;
+    public static JobRequestFragment newInstance(User user) {
+        JobRequestFragment fragment = new JobRequestFragment();
 
-    public static UserProfileFragment newInstance(User user) {
-        UserProfileFragment fragment = new UserProfileFragment();
-        Parcelable userParcel = Parcels.wrap(user);
         Bundle bundle = new Bundle();
+        Parcelable userParcel = Parcels.wrap(user);
         bundle.putParcelable(USER_KEY, userParcel);
         fragment.setArguments(bundle);
         return fragment;
     }
 
+    private JobRequestFragmentViewMvc mViewMvc;
+    @Inject JobRequestFragmentController mJobRequestFragmentController;
+    @Inject ViewMvcFactory mViewMvcFactory;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        mUser = Parcels.unwrap(getArguments().getParcelable(USER_KEY));
+
         getPresentationComponent().inject(this);
-        UserProfileViewMvc viewMvc = mViewMvcFactory.newInstance(UserProfileViewMvc.class, container);
-        mUserProfileController.bindUser(mUser);
-        mUserProfileController.bindView(viewMvc);
-        return mViewMvcFactory.newInstance(UserProfileViewMvc.class, container).getRootView();
+
+        mViewMvc = mViewMvcFactory.newInstance(JobRequestFragmentViewMvc.class, container);
+        mUser = Parcels.unwrap(getArguments().getParcelable(USER_KEY));
+
+        mJobRequestFragmentController.bindUser(mUser);
+        mJobRequestFragmentController.bindView(mViewMvc);
+        return mViewMvc.getRootView();
     }
 
     @Override
     public void onStart() {
         super.onStart();
-        mUserProfileController.onStart();
+        mJobRequestFragmentController.onStart();
     }
 
     @Override
     public void onStop() {
         super.onStop();
-        mUserProfileController.onStop();
-
-
+        mJobRequestFragmentController.onStop();
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

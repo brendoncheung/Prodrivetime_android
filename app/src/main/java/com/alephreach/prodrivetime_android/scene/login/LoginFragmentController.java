@@ -2,10 +2,9 @@ package com.alephreach.prodrivetime_android.scene.login;
 
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 
 import com.alephreach.prodrivetime_android.application.common.BaseController;
-import com.alephreach.prodrivetime_android.domain.data.User;
+import com.alephreach.prodrivetime_android.domain.User;
 import com.alephreach.prodrivetime_android.networking.pushnotification.FetchFireBaseTokenUseCase;
 import com.alephreach.prodrivetime_android.networking.usecase.FetchUserProfileAndLoginUseCase;
 import com.alephreach.prodrivetime_android.scene.common.coordinator.ApplicationCoordinator;
@@ -19,9 +18,9 @@ public class LoginFragmentController implements BaseController,
 
     private LoginFragmentViewMvc mViewMvc;
 
-    FetchUserProfileAndLoginUseCase mFetchUserProfileAndLoginUseCase;
-    FetchFireBaseTokenUseCase mFetchFireBaseTokenUseCase;
-    ApplicationCoordinator mApplicationCoordinator;
+    private final FetchUserProfileAndLoginUseCase mFetchUserProfileAndLoginUseCase;
+    private final FetchFireBaseTokenUseCase mFetchFireBaseTokenUseCase;
+    private final ApplicationCoordinator mApplicationCoordinator;
 
     @Inject
     public LoginFragmentController(FetchUserProfileAndLoginUseCase fetchUserProfileAndLoginUseCase,
@@ -100,7 +99,7 @@ public class LoginFragmentController implements BaseController,
     @Override
     public void onLoginFailed(String msg) {
         mViewMvc.hideLoadingIndicator();
-        mViewMvc.showAlertDialog("Technical error", "Failed to login");
+        mViewMvc.showAlertDialog("Technical error", "Please check your email/password");
     }
 
     @Override

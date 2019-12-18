@@ -1,9 +1,9 @@
 package com.alephreach.prodrivetime_android.networking;
 
-import com.alephreach.prodrivetime_android.domain.data.CompanyProfile;
-import com.alephreach.prodrivetime_android.domain.data.JobRequest;
-import com.alephreach.prodrivetime_android.domain.data.JobRequestHistory;
-import com.alephreach.prodrivetime_android.domain.data.User;
+import com.alephreach.prodrivetime_android.domain.CompanyProfile;
+import com.alephreach.prodrivetime_android.domain.JobRequest;
+import com.alephreach.prodrivetime_android.domain.JobRequestHistory;
+import com.alephreach.prodrivetime_android.domain.User;
 
 import java.util.List;
 

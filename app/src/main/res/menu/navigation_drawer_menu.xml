@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single" android:orderInCategory="1">
+
+        <item
+            android:id="@+id/profile_id"
+            android:title="Profile"
+            android:icon="@drawable/profile_drawer_icon" />
+
+        <item
+            android:id="@+id/job_request_id"
+            android:title="Request"
+            android:icon="@drawable/request_drawer_icon" />
+
+        <item
+            android:id="@+id/job_request_history_id"
+            android:icon="@drawable/history_drawer_icon"
+            android:title="History" />
+
+        <item
+            android:id="@+id/support_id"
+            android:title="Support"
+            android:icon="@drawable/support_drawer_icon" />
+
+    </group>
+
+    <group android:checkableBehavior="single" android:orderInCategory="2">
+        <item android:title="Settings">
+            <menu>
+                <item
+                    android:title="Contact Us"
+                    android:icon="@drawable/contact_icon"
+                    android:id="@+id/contact_us_id"/>
+
+                <item
+                    android:title="Rate Us"
+                    android:icon="@drawable/rate_us_icon"
+                    android:id="@+id/rate_us_id"/>
+
+                <item
+                    android:title="Privacy Policy"
+                    android:icon="@drawable/privacy_policy_icon"
+                    android:id="@+id/privacy_policy_id"/>
+
+                <item
+                    android:title="Log off"
+                    android:icon="@drawable/logoff_icon"
+                    android:id="@+id/logout_id"/>
+            </menu>
+        </item>
+    </group>
+</menu>

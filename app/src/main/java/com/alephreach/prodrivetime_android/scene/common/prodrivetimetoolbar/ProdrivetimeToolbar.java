@@ -1,4 +1,4 @@
-package com.alephreach.prodrivetime_android.scene.common.ProdrivetimeToolbar;
+package com.alephreach.prodrivetime_android.scene.common.prodrivetimetoolbar;
 
 import android.content.Context;
 import android.util.AttributeSet;

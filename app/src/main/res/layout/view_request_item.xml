@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/paddingSmall">
+
+    <ImageView
+        android:layout_width="@dimen/requestListPlaceHolderHeight"
+        android:layout_height="@dimen/requestListPlaceHolderHeight"
+        android:src="@drawable/request_list_placeholder"
+        android:scaleType="centerCrop"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/paddingSmall">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                style="@style/H2"
+                android:id="@+id/request_list_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Wine"/>
+
+            <TextView
+                style="@style/H2"
+                android:id="@+id/request_list_price"
+                android:textColor="@color/colorAccent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="textEnd"
+                android:text="$200"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/request_list_client_email"
+            android:text="611thesolutions"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@android:color/darker_gray"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/request_list_time_posted"
+            android:text="18/10/2019   |  03:00 PM"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/request_list_destination"
+                android:text="New York"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/request_list_arrow"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

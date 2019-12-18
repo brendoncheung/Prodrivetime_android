@@ -8,10 +8,10 @@
         android:layout_height="100dp"
         android:orientation="horizontal"
         android:weightSum="2"
-        android:gravity="center"
-        android:padding="30dp">
+        android:gravity="center">
 
         <TextView
+            style="@style/H1"
             android:id="@+id/user_profile_driver_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -19,9 +19,11 @@
             android:layout_weight="1"
             android:fontFamily="sans-serif-light"
             android:text="611solutions"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:paddingLeft="@dimen/paddingSmall"/>
 
         <TextView
+            style="@style/H2"
             android:id="@+id/user_profile_number_of_requests"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -30,7 +32,8 @@
             android:textSize="14sp"
             android:layout_weight="1"
             android:textAlignment="textEnd"
-            android:drawableRight="@drawable/request_tick"
+            android:paddingRight="@dimen/paddingSmall"
+            android:drawableEnd="@drawable/request_tick"
             android:drawablePadding="8dp"
             />
 
@@ -44,8 +47,120 @@
         android:layout_marginRight="16dp"/>
 
     <TextView
+        style="@style/H2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/paddingSmall"
+        android:layout_marginBottom="@dimen/paddingSmall"
+        android:layout_marginTop="@dimen/paddingSmall"
         android:text="Personal info"/>
+
+    <TextView
+        style="@style/H3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/paddingSmall"
+        android:layout_marginBottom="@dimen/paddingSmall"
+        android:text="Email"/>
+
+    <TextView
+        style="@style/H3"
+        android:id="@+id/user_profile_driver_email"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/paddingSmall"
+        android:paddingBottom="@dimen/paddingSmall"
+        android:text="611thesolutions@gmail.com"/>
+
+    <TextView
+        style="@style/H3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/paddingSmall"
+        android:layout_marginBottom="@dimen/paddingSmall"
+        android:text="Driver id:"/>
+
+    <TextView
+        style="@style/H3"
+        android:textStyle="bold"
+        android:id="@+id/user_profile_driver_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/paddingSmall"
+        android:paddingBottom="@dimen/paddingSmall"
+        android:text="123abc456efg"/>
+
+    <TextView
+        style="@style/H3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/paddingSmall"
+        android:layout_marginBottom="@dimen/paddingSmall"
+        android:text="Phone:"/>
+
+    <TextView
+        style="@style/H3"
+        android:textStyle="bold"
+        android:id="@+id/user_profile_driver_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/paddingSmall"
+        android:paddingBottom="@dimen/paddingSmall"
+        android:text="2601231234"/>
+
+    <TextView
+        style="@style/H3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/paddingSmall"
+        android:layout_marginBottom="@dimen/paddingSmall"
+        android:text="State:"/>
+
+    <TextView
+        style="@style/H3"
+        android:textStyle="bold"
+        android:id="@+id/user_profile_driver_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/paddingSmall"
+        android:paddingBottom="@dimen/paddingSmall"
+        android:text="Indiana"/>
+
+    <TextView
+        style="@style/H3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/paddingSmall"
+        android:layout_marginBottom="@dimen/paddingSmall"
+        android:text="City:"/>
+
+    <TextView
+        style="@style/H3"
+        android:textStyle="bold"
+        android:id="@+id/user_profile_driver_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/paddingSmall"
+        android:paddingBottom="@dimen/paddingSmall"
+        android:text="Fort Wayne"/>
+
+    <TextView
+        style="@style/H3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/paddingSmall"
+        android:layout_marginBottom="@dimen/paddingSmall"
+        android:text="Experience:"/>
+
+    <TextView
+        style="@style/H3"
+        android:textStyle="bold"
+        android:id="@+id/user_profile_driver_experience"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/paddingSmall"
+        android:paddingBottom="@dimen/paddingSmall"
+        android:text="10"/>
 
 </LinearLayout>

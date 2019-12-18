@@ -1,12 +1,8 @@
 package com.alephreach.prodrivetime_android.networking.usecase;
 
-import android.util.Log;
-
 import com.alephreach.prodrivetime_android.application.common.BaseObservableViewMvc;
-import com.alephreach.prodrivetime_android.domain.data.User;
+import com.alephreach.prodrivetime_android.domain.User;
 import com.alephreach.prodrivetime_android.networking.ProdrivetimeApi;
-
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;

@@ -3,6 +3,7 @@ package com.alephreach.prodrivetime_android.application.di.modules;
 import com.alephreach.prodrivetime_android.networking.Constants;
 import com.alephreach.prodrivetime_android.networking.ProdrivetimeApi;
 import com.alephreach.prodrivetime_android.networking.pushnotification.FetchFireBaseTokenUseCase;
+import com.alephreach.prodrivetime_android.networking.usecase.FetchJobRequestUseCase;
 import com.alephreach.prodrivetime_android.networking.usecase.FetchUserProfileAndLoginUseCase;
 import com.facebook.stetho.okhttp3.StethoInterceptor;
 
@@ -61,6 +62,11 @@ public class ApplicationModule {
     @Provides
     FetchFireBaseTokenUseCase getFetchFireBaseTokenUseCase() {
         return new FetchFireBaseTokenUseCase();
+    }
+
+    @Provides
+    FetchJobRequestUseCase getFetchJobRequestUseCase(ProdrivetimeApi api) {
+        return new FetchJobRequestUseCase(api);
     }
 
 }

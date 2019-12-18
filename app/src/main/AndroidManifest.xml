@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:name=".application.ProdrivetimeApplication">
-        <activity android:name=".scene.common.ProdrivetimeActivity">
+        <activity android:name=".scene.common.hostactivity.ProdrivetimeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
