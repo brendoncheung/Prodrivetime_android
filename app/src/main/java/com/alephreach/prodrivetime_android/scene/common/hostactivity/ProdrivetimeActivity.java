@@ -3,13 +3,12 @@ package com.alephreach.prodrivetime_android.scene.common.hostactivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.FrameLayout;
 
 import com.alephreach.prodrivetime_android.R;
 import com.alephreach.prodrivetime_android.application.di.factory.ViewMvcFactory;
 import com.alephreach.prodrivetime_android.scene.common.baseclass.BaseActivity;
-import com.alephreach.prodrivetime_android.scene.common.coordinator.ApplicationCoordinator;
+import com.alephreach.prodrivetime_android.scene.common.coordinator.ApplicationCoordinatorImpl;
 import com.alephreach.prodrivetime_android.scene.common.wrapper.FragmentFrameWrapper;
 
 import javax.inject.Inject;
@@ -20,7 +19,8 @@ public class ProdrivetimeActivity extends BaseActivity implements FragmentFrameW
     private ProdrivetimeActivityViewMvc mProdrivetimeActivityViewMvc;
 
     @Inject ProdrivetimeActivityController mProdrivetimeActivityController;
-    @Inject ApplicationCoordinator mApplicationCoordinator;
+    @Inject
+    ApplicationCoordinatorImpl mApplicationCoordinatorImpl;
     @Inject ViewMvcFactory mViewMvcFactory;
 
     @Override
@@ -50,7 +50,7 @@ public class ProdrivetimeActivity extends BaseActivity implements FragmentFrameW
     }
 
     private void configureApplicationCoordinator() {
-        mApplicationCoordinator.bindFragmentFrame(getFragmentFrameId());
+        mApplicationCoordinatorImpl.bindFragmentFrame(getFragmentFrameId());
     }
 
     private void configureToolbar() {
@@ -68,7 +68,7 @@ public class ProdrivetimeActivity extends BaseActivity implements FragmentFrameW
     protected void onStart() {
         super.onStart();
         mProdrivetimeActivityController.onStart();
-        mApplicationCoordinator.onStart();
+        mApplicationCoordinatorImpl.onStart();
     }
 
     @Override

@@ -12,8 +12,8 @@ import com.alephreach.prodrivetime_android.authentication.AuthenticatorImpl;
 import com.alephreach.prodrivetime_android.networking.pushnotification.FetchFireBaseTokenUseCase;
 import com.alephreach.prodrivetime_android.networking.usecase.FetchJobRequestUseCase;
 import com.alephreach.prodrivetime_android.networking.usecase.FetchUserProfileAndLoginUseCase;
+import com.alephreach.prodrivetime_android.scene.common.coordinator.ApplicationCoordinatorImpl;
 import com.alephreach.prodrivetime_android.scene.common.hostactivity.ProdrivetimeActivityController;
-import com.alephreach.prodrivetime_android.scene.common.coordinator.ApplicationCoordinator;
 import com.alephreach.prodrivetime_android.scene.login.LoginFragmentController;
 import com.alephreach.prodrivetime_android.scene.requests.JobRequestFragmentController;
 import com.alephreach.prodrivetime_android.scene.userprofile.UserProfileController;
@@ -74,13 +74,13 @@ public class PresentationModule {
 
     @Singleton
     @Provides
-    ApplicationCoordinator getApplicationCoordinator(Authenticator authenticator,
-                                                     FragmentManager manager) {
-        return new ApplicationCoordinator(authenticator, manager);
+    ApplicationCoordinatorImpl getApplicationCoordinator(Authenticator authenticator,
+                                                         FragmentManager manager) {
+        return new ApplicationCoordinatorImpl(authenticator, manager);
     }
 
     @Provides
-    ProdrivetimeActivityController getProdrivetimeActivityController(ApplicationCoordinator coordinator,
+    ProdrivetimeActivityController getProdrivetimeActivityController(ApplicationCoordinatorImpl coordinator,
                                                                      FetchUserProfileAndLoginUseCase fetchUserProfileAndLoginUseCase) {
         return new ProdrivetimeActivityController(coordinator, fetchUserProfileAndLoginUseCase);
     }
@@ -88,7 +88,7 @@ public class PresentationModule {
     @Provides
     LoginFragmentController getLoginFragmentController(FetchUserProfileAndLoginUseCase userProfileAndLoginUseCase,
                                                        FetchFireBaseTokenUseCase fireBaseTokenUseCase,
-                                                       ApplicationCoordinator coordinator) {
+                                                       ApplicationCoordinatorImpl coordinator) {
         return new LoginFragmentController(
                 userProfileAndLoginUseCase,
                 fireBaseTokenUseCase,
@@ -101,8 +101,9 @@ public class PresentationModule {
     }
 
     @Provides
-    JobRequestFragmentController getJobRequestFragmentController(FetchJobRequestUseCase fetchJobRequestUseCase) {
-        return new JobRequestFragmentController(fetchJobRequestUseCase, applicationCoordinator);
+    JobRequestFragmentController getJobRequestFragmentController(FetchJobRequestUseCase fetchJobRequestUseCase,
+                                                                 ApplicationCoordinatorImpl applicationCoordinatorImpl) {
+        return new JobRequestFragmentController(fetchJobRequestUseCase, applicationCoordinatorImpl);
     }
 
 }

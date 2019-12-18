@@ -3,7 +3,7 @@ package com.alephreach.prodrivetime_android.scene.requests;
 import com.alephreach.prodrivetime_android.domain.JobRequest;
 import com.alephreach.prodrivetime_android.domain.User;
 import com.alephreach.prodrivetime_android.networking.usecase.FetchJobRequestUseCase;
-import com.alephreach.prodrivetime_android.scene.common.coordinator.ApplicationCoordinator;
+import com.alephreach.prodrivetime_android.scene.common.coordinator.ApplicationCoordinatorImpl;
 
 import java.util.List;
 
@@ -12,15 +12,15 @@ import javax.inject.Inject;
 public class JobRequestFragmentController implements FetchJobRequestUseCase.Listener, JobRequestFragmentViewMvc.Listener {
 
     private final FetchJobRequestUseCase mFetchJobRequestUseCase;
-    private final ApplicationCoordinator mApplicationCoordinator;
+    private final ApplicationCoordinatorImpl mApplicationCoordinatorImpl;
 
     private User mUser;
     private JobRequestFragmentViewMvc mViewMvc;
 
     @Inject
-    public JobRequestFragmentController(FetchJobRequestUseCase fetchJobRequestUseCase, ApplicationCoordinator applicationCoordinator) {
+    public JobRequestFragmentController(FetchJobRequestUseCase fetchJobRequestUseCase, ApplicationCoordinatorImpl applicationCoordinatorImpl) {
         mFetchJobRequestUseCase = fetchJobRequestUseCase;
-        mApplicationCoordinator = applicationCoordinator;
+        mApplicationCoordinatorImpl = applicationCoordinatorImpl;
     }
 
     public void onStart() {
@@ -67,6 +67,6 @@ public class JobRequestFragmentController implements FetchJobRequestUseCase.List
 
     @Override
     public void onRequestClicked(JobRequest jobRequest) {
-        mApplicationCoordinator.pushToJobRequestDetails(jobRequest);
+        mApplicationCoordinatorImpl.pushToJobRequestDetails(jobRequest);
     }
 }

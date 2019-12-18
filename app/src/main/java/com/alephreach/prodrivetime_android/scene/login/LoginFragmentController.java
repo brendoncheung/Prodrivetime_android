@@ -7,7 +7,7 @@ import com.alephreach.prodrivetime_android.application.common.BaseController;
 import com.alephreach.prodrivetime_android.domain.User;
 import com.alephreach.prodrivetime_android.networking.pushnotification.FetchFireBaseTokenUseCase;
 import com.alephreach.prodrivetime_android.networking.usecase.FetchUserProfileAndLoginUseCase;
-import com.alephreach.prodrivetime_android.scene.common.coordinator.ApplicationCoordinator;
+import com.alephreach.prodrivetime_android.scene.common.coordinator.ApplicationCoordinatorImpl;
 
 import javax.inject.Inject;
 
@@ -20,15 +20,15 @@ public class LoginFragmentController implements BaseController,
 
     private final FetchUserProfileAndLoginUseCase mFetchUserProfileAndLoginUseCase;
     private final FetchFireBaseTokenUseCase mFetchFireBaseTokenUseCase;
-    private final ApplicationCoordinator mApplicationCoordinator;
+    private final ApplicationCoordinatorImpl mApplicationCoordinatorImpl;
 
     @Inject
     public LoginFragmentController(FetchUserProfileAndLoginUseCase fetchUserProfileAndLoginUseCase,
                                    FetchFireBaseTokenUseCase fetchFireBaseTokenUseCase,
-                                   ApplicationCoordinator coordinator) {
+                                   ApplicationCoordinatorImpl coordinator) {
         mFetchUserProfileAndLoginUseCase = fetchUserProfileAndLoginUseCase;
         mFetchFireBaseTokenUseCase = fetchFireBaseTokenUseCase;
-        mApplicationCoordinator = coordinator;
+        mApplicationCoordinatorImpl = coordinator;
     }
 
     public void bindView(LoginFragmentViewMvc viewMvc) {
@@ -105,7 +105,7 @@ public class LoginFragmentController implements BaseController,
     @Override
     public void onLoginSuccessful(User user) {
         mViewMvc.hideLoadingIndicator();
-        mApplicationCoordinator.pushToUserProfile(user);
+        mApplicationCoordinatorImpl.pushToUserProfile(user);
     }
     //</editor-fold>
 

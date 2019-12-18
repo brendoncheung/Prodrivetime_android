@@ -1,22 +1,20 @@
 package com.alephreach.prodrivetime_android.scene.common.hostactivity;
 
-import android.widget.Toast;
-
 import com.alephreach.prodrivetime_android.R;
 import com.alephreach.prodrivetime_android.domain.User;
 import com.alephreach.prodrivetime_android.networking.usecase.FetchUserProfileAndLoginUseCase;
-import com.alephreach.prodrivetime_android.scene.common.coordinator.ApplicationCoordinator;
+import com.alephreach.prodrivetime_android.scene.common.coordinator.ApplicationCoordinatorImpl;
 
 public class ProdrivetimeActivityController implements ProdrivetimeActivityViewMvc.Listener, FetchUserProfileAndLoginUseCase.Listener {
 
-    private final ApplicationCoordinator mApplicationCoordinator;
+    private final ApplicationCoordinatorImpl mApplicationCoordinatorImpl;
     private final FetchUserProfileAndLoginUseCase mFetchUserProfileAndLoginUseCase;
 
     private ProdrivetimeActivityViewMvc mViewMvc;
 
-    public ProdrivetimeActivityController(ApplicationCoordinator coordinator,
+    public ProdrivetimeActivityController(ApplicationCoordinatorImpl coordinator,
                                           FetchUserProfileAndLoginUseCase fetchUserProfileAndLoginUseCase) {
-        mApplicationCoordinator = coordinator;
+        mApplicationCoordinatorImpl = coordinator;
         mFetchUserProfileAndLoginUseCase = fetchUserProfileAndLoginUseCase;
     }
 
@@ -40,11 +38,11 @@ public class ProdrivetimeActivityController implements ProdrivetimeActivityViewM
         switch (id) {
 
             case R.id.profile_id:
-                mApplicationCoordinator.pushToUserProfileCached();
+                mApplicationCoordinatorImpl.pushToUserProfileCached();
                 break;
 
             case R.id.job_request_id:
-                mApplicationCoordinator.pushToJobRequest();
+                mApplicationCoordinatorImpl.pushToJobRequest();
                 break;
 
         }
